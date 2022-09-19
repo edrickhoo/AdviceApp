@@ -1,0 +1,110 @@
+:root {
+  /* Primary */
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+
+  /* Secondary */
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.wrapper {
+  background-color: var(--DarkBlue);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--DarkGrayishBlue);
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+  margin: 0 2rem;
+}
+
+.card > * {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.advice-number {
+  text-align: center;
+  color: var(--NeonGreen);
+  letter-spacing: 3px;
+}
+
+.advice-text {
+  text-align: center;
+  color: var(--LightCyan);
+  font-size: 16px;
+  max-width: 600px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: var(--NeonGreen);
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: -32px;
+}
+
+.button:hover {
+  box-shadow: 0 0 20px var(--NeonGreen);
+  cursor: pointer;
+}
+
+.divider {
+  display: none;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.divider-mobile {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 375px) {
+  .advice-text {
+    font-size: 28px;
+  }
+
+  .divider {
+    display: flex;
+  }
+
+  .divider-mobile {
+    display: none;
+  }
+}
